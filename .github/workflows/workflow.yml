@@ -1,0 +1,16 @@
+# GitHub Action workflow that runs on push to main branch
+# Docker build and push the album-api image to ACR
+
+on:
+  push:
+    branches:
+      - main
+name: Build and Push Album API Docker Image
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # Add further steps here as needed
